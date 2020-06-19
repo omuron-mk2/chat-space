@@ -30,8 +30,8 @@ Things you may want to cover:
 |name|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
 |password|string|null: false|
-|groups_id|integer|
-|comment_id|integer|
+|group_id|integer|null: false, foreign_key: true|
+|comment_id|integer|null: false, foreign_key: true|
 
 ### Association
 - has_many :group
@@ -43,8 +43,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
-|users_id|integer|null: false, foreign_key: true|
-|comment_id|integer|
+|user_id|integer|null: false, foreign_key: true|
+|comment_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
@@ -56,8 +56,8 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|null: false|
-|users_id|integer|null: false|
-|comment_id|integer|
+|user_id|integer|null: false, foreign_key: true|
+|group_id|integer|null: false, foreign_key: true|
 
 ### Association
 - belongs_to :user
