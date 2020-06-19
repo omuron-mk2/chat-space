@@ -50,3 +50,15 @@ Things you may want to cover:
 - belongs_to :user
 - has_many :comment
 - has_many :users_groups
+
+## commentsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|comment|text|null: false|
+|users_id|integer|null: false|
+|comment_id|integer|
+
+### Association
+- belongs_to :user
+- belongs_to :group
