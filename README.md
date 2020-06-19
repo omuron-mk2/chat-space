@@ -30,25 +30,21 @@ Things you may want to cover:
 |name|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
 |password|string|null: false|
-|group_id|integer|null: false, foreign_key: true|
-|comment_id|integer|null: false, foreign_key: true|
 
 ### Association
-- has_many :group
-- has_many :comment
-- belongs_to :users_groups
+- has_many :groups
+- has_many :comments
+- has_many :users_groups
 
 ## groupsテーブル
 
 |Column|Type|Options|
 |------|----|-------|
 |name|string|null: false, foreign_key: true|
-|user_id|integer|null: false, foreign_key: true|
-|comment_id|integer|null: false, foreign_key: true|
 
 ### Association
-- belongs_to :user
-- has_many :comment
+- has_many :users
+- has_many :comments
 - has_many :users_groups
 
 ## commentsテーブル
@@ -56,6 +52,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |comment|text|null: false|
+|image|string｜
 |user_id|integer|null: false, foreign_key: true|
 |group_id|integer|null: false, foreign_key: true|
 
