@@ -22,3 +22,16 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|email|string|null: false, foreign_key: true|
+|password|string|null: false|
+
+### Association
+- has_many :group
+- has_many :comment
+- belongs_to :users_groups
