@@ -35,3 +35,16 @@ Things you may want to cover:
 - has_many :group
 - has_many :comment
 - belongs_to :users_groups
+
+## groupsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string|null: false, foreign_key: true|
+|users_id|integer|null: false, foreign_key: true|
+|comment_id|integer|
+
+### Association
+- belongs_to :user
+- has_many :comment
+- has_many :users_groups
