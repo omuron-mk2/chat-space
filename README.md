@@ -30,6 +30,8 @@ Things you may want to cover:
 |name|string|null: false, foreign_key: true|
 |email|string|null: false, foreign_key: true|
 |password|string|null: false|
+|groups_id|integer|
+|comment_id|integer|
 
 ### Association
 - has_many :group
