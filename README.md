@@ -34,6 +34,7 @@ Things you may want to cover:
 ### Association
 - has_many :groups, through: :users_groups
 - has_many :comments
+- has_many :users_groups
 
 ## groupsテーブル
 
@@ -44,6 +45,7 @@ Things you may want to cover:
 ### Association
 - has_many :users, through: :users_groups
 - has_many :comments
+- has_many :users_groups
 
 ## commentsテーブル
 
