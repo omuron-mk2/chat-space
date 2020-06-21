@@ -28,3 +28,11 @@
         .message__content
           今日は夜から雨
   .Chat-main__message-form
+    %form.form
+      %input.hidden{type: "hidden"}
+      .left-form
+        %input.left-form__content{placeholder: "type a message",type: "text"}
+        %label.left-form__icon
+          = icon('far', 'image',class: "left-form__icon__btn")
+          %input.left-form__icon__file{type: "file" }
+      %input.submit{value: "Send", type: "submit"}
