@@ -26,15 +26,14 @@
         color: #ffffff;
         font-weight: bold;
       }
-      &__icons{
-        width: 60px;
-        text-decoration: none;
+      .top-items-list{
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        &__btn{
-          color: #ffffff;
-          letter-spacing: 5px;
+        justify-content: end;
+        li{
+          padding-left: 5px;
+          a{
+            color: #ffffff;
+          }
         }
       }
     }
