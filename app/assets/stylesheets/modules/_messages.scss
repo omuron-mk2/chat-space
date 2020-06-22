@@ -26,15 +26,12 @@
         color: #ffffff;
         font-weight: bold;
       }
-      &__icons{
-        width: 60px;
-        text-decoration: none;
+      .top-icon__list{
         display: flex;
-        justify-content: flex-end;
-        align-items: center;
-        &__btn{
-          color: #ffffff;
-          letter-spacing: 5px;
+        justify-content: end;
+        >.top-icon{
+          width: 60px;
+          text-decoration: none;
         }
       }
     }
