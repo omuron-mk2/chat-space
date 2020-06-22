@@ -1,14 +1,14 @@
 .Chat-main
-  .Chat-main__group-info
-    .main-items
-      .main-items__name
+  .Chat-main__top
+    .top-items
+      .top-items__name
         test
-      %ul.main-items__member-list 
+      %ul.top-items__members-list 
         Member : 
-        %li.main-items__member-name
+        %li.top-items__member
           masa
-    = link_to "Edit",'#',class:"main-items__edit"
-  .Chat-main__message-list
+    = link_to "Edit",'#',class:"top-items__edit"
+  .Chat-main__message
     .message-space
       .message-info
         .message-info__name
@@ -27,7 +27,7 @@
       .message
         .message__content
           今日は夜から雨
-  .Chat-main__message-form
+  .Chat-main__form
     %form.form
       %input.hidden{type: "hidden"}
       .left-form
