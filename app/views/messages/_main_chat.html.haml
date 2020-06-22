@@ -1,0 +1,38 @@
+.Chat-main
+  .Chat-main__top
+    .top-items
+      .top-items__name
+        test
+      %ul.top-items__members-list 
+        Member : 
+        %li.top-items__member
+          masa
+    = link_to "Edit",'#',class:"top-items__edit"
+  .Chat-main__message
+    .message-space
+      .message-info
+        .message-info__name
+          masa
+        .message-info__date
+          2019/11/20(Wed) 17:43:01
+      .message
+        .message__content
+          おはよう
+    .message-space
+      .message-info
+        .message-info__name
+          masa
+        .message-info__date
+          2019/11/20(Wed) 17:43:34
+      .message
+        .message__content
+          今日は夜から雨
+  .Chat-main__form
+    %form.form
+      %input.hidden{type: "hidden"}
+      .left-form
+        %input.left-form__content{placeholder: "type a message",type: "text"}
+        %label.left-form__icon
+          = icon('far', 'image',class: "left-form__icon__btn")
+          %input.left-form__icon__file{type: "file" }
+      %input.submit{value: "Send", type: "submit"}
