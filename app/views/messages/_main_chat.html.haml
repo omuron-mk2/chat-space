@@ -9,30 +9,33 @@
           masa
     = link_to "Edit",'#',class:"top-items__edit"
   .Chat-main__message
-    .message-space
-      .message-info
-        .message-info__name
-          masa
-        .message-info__date
-          2019/11/20(Wed) 17:43:01
-      .message
-        .message__content
-          おはよう
-    .message-space
-      .message-info
-        .message-info__name
-          masa
-        .message-info__date
-          2019/11/20(Wed) 17:43:34
-      .message
-        .message__content
-          今日は夜から雨
+    = render @messages
   .Chat-main__form
-    %form.form
-      %input.hidden{type: "hidden"}
+    = form_with model: [@group, @message], html: {class: "form"}, local: true do |f|
       .left-form
-        %input.left-form__content{placeholder: "type a message",type: "text"}
-        %label.left-form__icon
-          = icon('far', 'image',class: "left-form__icon__btn")
-          %input.left-form__icon__file{type: "file" }
-      %input.submit{value: "Send", type: "submit"}
+        = f.text_field :content, class: 'left-form__content', placeholder: 'type a message'
+        = f.label :image, class: 'left-form__icon' do
+          = icon('far', 'image', class: "left-form__icon__btn")
+          = f.file_field :image, class: 'left-form__icon__file'
+      = f.submit 'Send', class: 'submit'
+
+  -# .Chat-main__form
+  -#   %form.form
+  -#     %input.hidden{type: "hidden"}
+  -#     .left-form
+  -#       %input.left-form__content{placeholder: "type a message",type: "text"}
+  -#       %label.left-form__icon
+  -#         = icon('far', 'image',class: "left-form__icon__btn")
+  -#         %input.left-form__icon__file{type: "file" }
+  -#     %input.submit{value: "Send", type: "submit"}
+
+  -# .Chat-main__form
+  -#   = form_with class: "Chat-main__form"
+  -#     .left-form
+  -#       = text_field :content, class: 'left-form__content' placeholder: 'type a message'
+  -#       = label :image, class: 'left-form__icon' do
+  -#         = icon('far', 'image', class: "left-form__icon__btn")
+  -#         = file_friend :image, class: 'left-form__icon__file'
+  -#       = submit 'Send', class: 'submit'
+
+
