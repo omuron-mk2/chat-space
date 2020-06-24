@@ -2,12 +2,13 @@
   .Chat-main__top
     .top-items
       .top-items__name
-        test
+        = @group.name
       %ul.top-items__members-list 
         Member : 
         %li.top-items__member
-          masa
-    = link_to "Edit",'#',class:"top-items__edit"
+        - @group.users.each do |user|
+          = user.name
+    = link_to "Edit", edit_group_path(@group) ,class:"top-items__edit"
   .Chat-main__message
     = render @messages
   .Chat-main__form
