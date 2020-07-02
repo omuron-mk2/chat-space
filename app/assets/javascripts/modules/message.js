@@ -1,6 +1,7 @@
 $(function(){
   function buildHTML(message){
     if ( message.image ) {
+      console.log(message.image)
       let html =
       `<div class="message-space" data-message-id=${message.id}>
         <div class="message-info">
@@ -15,7 +16,7 @@ $(function(){
           <div class="message__content">
             ${message.content}
           </div>
-          <imag class="Message__image" src="${message.image}">
+          <img class="Message__image" src="${message.image}">
         </div>
       </div>`
     return html;
@@ -54,7 +55,7 @@ $(function(){
     })
     .done(function(data){
       let html = buildHTML(data);
-      $('.Chat-main__message').append(html);      
+      $('.Chat-main__message').append(html);
       $('form')[0].reset();
       $('.Chat-main__message').animate({ scrollTop: $('.Chat-main__message')[0].scrollHeight});
       $(".submit").prop("disabled", false);
